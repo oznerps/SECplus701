@@ -365,7 +365,10 @@ dial-peer voice 82 Voip
  destination-pattern 82..
  session target ipv4:10.82.100.8
  codec g711ULAW
-
+dial-peer voice 91 Voip
+ destination-pattern 82..
+ session target ipv4:10.82.100.8
+ codec g711ULAW
 TASK3***TASK3***TASK3***
 TASK3***TASK3***TASK3***
 PRIMARY EDGE ROUTER CONFIGURATION! owned by PLDT !!!
