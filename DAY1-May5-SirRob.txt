@@ -70,6 +70,23 @@ config t
 	 description VOICEVLAN
 end
 
+Securing Switches using AAA: authentication, authorization, accounting.
+config t
+username admin privilege 15 secret pass
+username namemo privilege 15 secret pass
+line vty 0 14
+login local
+end
+
+Securing Cisco Switch dataplance traffic with PublicKEY:
+config t
+ip domain-name keykeymo
+crypto key generate rsa modulus 1024
+ip ssh version 2
+end
+show crypto key mypubkey all
+show ip ssh
+
 WARNING: IF YOU SEE AMBER/ORANGE= NEEDS FIXING!!!
 
 Trunk Ports: switch to switch:
@@ -643,3 +660,4 @@ exit
           
 sip-ua
 sip-server ipv4:192.168.k.1
+
